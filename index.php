@@ -50,15 +50,27 @@
   <title>PHP Hotel</title>
 </head>
 <body>
+    <h1 class="text-center">PHP Hotel</h1>
+    <h3 class="text-center">Lista hotel</h3>
     <div class="container m-5 text-center">
-        <h1>PHP Hotel</h1>
-        
-        <h3>Lista hotel</h3>
-        <ul style="list-style: none; font-weight:700">
-            <li><?php foreach ($hotels as $hotel){
-                echo '<li>' . $hotel['name'] . ' ' . $hotel['description'] . ' ' . $hotel['parking'] . ' ' . $hotel['vote'] . ' ' . $hotel['distance_to_center'] . '</li>';
-            }?></li>
-        </ul>
+
+        <div class="row row-cols-3  d-flex justify-content-center">
+                
+            <?php foreach ($hotels as $hotel){
+            echo '<div class="card col-4" style="width: 18rem;">' 
+                . '<div class="card-body">' 
+                    . '<h5 class="card-title">' . $hotel['name'] . '</h5>' 
+                    . '<h6 class="card-subtitle mb-2 text-muted">' . $hotel['description'] . '</h6>' 
+                    . '<h6>Parcheggio: ' . $hotel['parking'] = ($hotel['parking']) ? 'Si' : 'No' . '</h6>' 
+                    . '<h5 class="card-title">Voto: ' . $hotel['vote'] . '</h5>' 
+                    . '<h5 class="card-title">Distanza dal centro: ' . $hotel['distance_to_center'] . '</h5>' 
+                . '</div>' 
+            . '</div>';
+            }?>
+        </div>
+
+    </div>
+</div>
 
     </div>
   
