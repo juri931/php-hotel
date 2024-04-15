@@ -53,7 +53,7 @@
     <h1 class="text-center">PHP Hotel</h1>
     <h3 class="text-center">Lista hotel</h3>
     
-    <div class="container m-5 text-center">
+    <div class="container my-5  text-center">
 
         <div class="row row-cols-3 gap-1 d-flex justify-content-center">
                 
