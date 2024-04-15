@@ -52,6 +52,7 @@
 <body>
     <h1 class="text-center">PHP Hotel</h1>
     <h3 class="text-center">Lista hotel</h3>
+    
     <div class="container m-5 text-center">
 
         <div class="row row-cols-3  d-flex justify-content-center">
@@ -63,16 +64,15 @@
                     . '<h6 class="card-subtitle mb-2 text-muted">' . $hotel['description'] . '</h6>' 
                     . '<h6>Parcheggio: ' . $hotel['parking'] = ($hotel['parking']) ? 'Si' : 'No' . '</h6>' 
                     . '<h5 class="card-title">Voto: ' . $hotel['vote'] . '</h5>' 
-                    . '<h5 class="card-title">Distanza dal centro: ' . $hotel['distance_to_center'] . '</h5>' 
+                    . '<h5 class="card-title">Distanza dal centro: ' . $hotel['distance_to_center'] . ' Km' . '</h5>' 
                 . '</div>' 
             . '</div>';
             }?>
+
         </div>
 
     </div>
-</div>
 
-    </div>
   
 </body>
 </html>
