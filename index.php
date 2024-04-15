@@ -55,19 +55,19 @@
     
     <div class="container m-5 text-center">
 
-        <div class="row row-cols-3  d-flex justify-content-center">
+        <div class="row row-cols-3 gap-1 d-flex justify-content-center">
                 
-            <?php foreach ($hotels as $hotel){
-            echo '<div class="card col-4" style="width: 18rem;">' 
-                . '<div class="card-body">' 
-                    . '<h5 class="card-title">' . $hotel['name'] . '</h5>' 
-                    . '<h6 class="card-subtitle mb-2 text-muted">' . $hotel['description'] . '</h6>' 
-                    . '<h6>Parcheggio: ' . $hotel['parking'] = ($hotel['parking']) ? 'Si' : 'No' . '</h6>' 
-                    . '<h5 class="card-title">Voto: ' . $hotel['vote'] . '</h5>' 
-                    . '<h5 class="card-title">Distanza dal centro: ' . $hotel['distance_to_center'] . ' Km' . '</h5>' 
-                . '</div>' 
-            . '</div>';
-            }?>
+            <?php foreach ($hotels as $hotel) { ?>
+                <div class="card col-4" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $hotel['name']; ?></h5>
+                        <h6 class="card-subtitle mb-2 text-muted"><?php echo $hotel['description']; ?></h6>
+                        <h6>Parcheggio: <?php echo ($hotel['parking']) ? 'Si' : 'No'; ?></h6>
+                        <h6 class="card-title">Voto: <?php echo $hotel['vote']; ?></h6>
+                        <h6 class="card-title">Distanza dal centro: <?php echo $hotel['distance_to_center']; ?> Km</h6>
+                    </div>
+                </div>
+            <?php } ?>
 
         </div>
 
