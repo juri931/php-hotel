@@ -38,6 +38,24 @@
         ],
 
     ];
+
+    $vote = isset($_POST['vote']) ? $_POST['vote'] : 0;
+
+    if(!isset($_POST['parking'])){
+        foreach($filtered_hotels as $hotels){
+            if($hotel['vote'] >= $vote){
+                $filtered_hotels[] = $hotel;
+            }
+        }
+    }else{
+        foreach($hotels as $hotel){
+            if($hotel['parking'] && $hotel['vote'] >= $vote){
+                $filtered_hotels[] = $hotel;
+            }
+        }
+    };
+
+    $vote = isset($hotel['vote']) ? $hotel['vote'] : 0;
 ?>
 
 <!DOCTYPE html>
@@ -52,6 +70,24 @@
 <body>
     <h1 class="text-center">PHP Hotel</h1>
     <h3 class="text-center">Lista hotel</h3>
+    <h4 class="text-center">Filtri:</h4>
+
+    <form action="index.php" method="POST">
+        <div class="text-center">
+
+        <div class="my-3">
+            <input class="form-check-input" type="checkbox" value="Parcheggio" id="parking" name="parking">
+            <label for="parking">Solo con parcheggio</label>
+        </div>
+            
+        <div class="my-3">Voto:
+            <?php for($i = 0; $i <= 5; $i++): ?>
+                <input class="form-check-input" type="radio" name="vote" id="vote<?php echo $i ?>" value="<?php echo $i ?>">
+                <label class="form-check-label me-2 " for="vote<?php echo $i ?>"><?php echo $i ?></label>
+                <?php endfor ?>
+        </div>
+        </div>
+    </form>
     
     <div class="container my-5  text-center">
 

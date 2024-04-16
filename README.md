@@ -14,6 +14,3 @@ Dopo aggiungete Bootstrap e mostrate le informazioni con una tabella (o se prefe
 
 NOTA: deve essere possibile utilizzare entrambi i filtri contemporaneamente (es. ottenere una lista con hotel che dispongono di parcheggio e che hanno un voto di tre stelle o superiore)
 Se non viene specificato nessun filtro, visualizzare come in precedenza tutti gli hotel.
-
-NOTA: deve essere possibile utilizzare entrambi i filtri contemporaneamente (es. ottenere una lista con hotel che dispongono di parcheggio e che hanno un voto di tre stelle o superiore)
-Se non viene specificato nessun filtro, visualizzare come in precedenza tutti gli hotel.
